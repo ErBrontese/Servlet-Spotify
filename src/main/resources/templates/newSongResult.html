@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>New car added</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body style="background-color: rgb(32, 87, 32);">
+<h1>New car added</h1>
+<p th:text="'id:  ' + ${musica.id}" /> <!--Andiamo a prendere il valore inserito-->
+<p th:text="'name: ' + ${musica.name}" />
+<p th:text="'description: ' + ${musica.description}" />
+<p th:text="'data: ' + ${musica.data}" />
+ <!--Invia valore-->
+<p><a href="/song">Add a new song</a></p>
+<p><a href="/songs">Get all list of songs </a></p>
+</body>
+</html>

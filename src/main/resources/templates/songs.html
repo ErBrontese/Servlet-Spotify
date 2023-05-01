@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <head>
+        <title>Students</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+</head>
+<body style="background-color: rgb(32, 87, 32);">
+    <!--Andiamo a scorere l'array e stampiamo il none e l'eta-->
+    <p th:each="song:${songs}">
+        <span th:text="${song.name}"></span>
+        :
+        <span th:text="${song.description}"></span>
+        
+        <!--Prendiamo l'id del record e lo passiamo alla edit o delete -->
+        <a th:href="@{/song/{id}(id = ${song.id})}">Edit ✎</a>
+        
+        <a th:href="@{/song/delete/{id}(id = ${song.id})}">Delete 🗑</a>
+    </p>
+<p><a href="/song/home">Torna alla home</a></p>
+</body>
+</html>
